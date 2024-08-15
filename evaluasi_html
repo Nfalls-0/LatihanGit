@@ -8,7 +8,7 @@
     <p>Halaman ini dibuat untuk tujuan evaluasi dasar HTML. ini adalah tugas HTML pertama saya.</p>
 
     <h2>Pengelolaan Teks</h2>
-    <p>Hai, saya Naufal! Saya itu orangnya pendiam dan tulus, tapi punya hobi yang seru. Saya suka banget menggambar dan dengerin musik. Biasanya, saya nyari inspirasi buat gambar sambil dengerin musik yang saya suka. Dengan kepribadian yang suka merenung, saya sering banget dapet ide dari hal-hal kecil di sekitar saya. Bagi saya, <strong>menemukan kebahagiaan</strong> lewat apa yang saya lakuin itu <em>penting banget!</em></p>
+    <p>Hai, saya Naufal! Saya itu orangnya cenderung cuek dan pendiam, tapi punya hobi yang seru. Saya suka banget menggambar dan dengerin musik. Biasanya, saya nyari inspirasi buat gambar sambil dengerin musik yang saya suka. Dengan kepribadian yang suka merenung, saya sering banget dapet ide dari hal-hal kecil di sekitar saya. Bagi saya, <strong>menemukan kebahagiaan</strong> lewat apa yang saya lakuin itu <em>penting banget!</em></p>
     
     <hr>
     
@@ -22,7 +22,7 @@
 
     <p>Dan ini gambar yang saya suka:</p>
     <a href="https://id.pinterest.com/pin/584131014184832682/" target="_blank">
-        <img src="we can do this.jpg" alt="Gambar Megurine Luka Chibi" style="width: 150px; height: auto;"/>
+        <img src="https://nfalls-0.github.io/LatihanGit/images/we_can_do_this.jpg" alt="Chibi" style="width: 150px; height: auto;"/>
     </a>
 
     <h2>Membuat Daftar</h2>
