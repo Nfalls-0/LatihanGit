@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluasi HTML Dasar</title>
+</head>
+<body>
+    <h1>Selamat Datang di Evaluasi HTML</h1>
+    <p>Halaman ini dibuat untuk tujuan evaluasi dasar HTML. ini adalah tugas HTML pertama saya.</p>
+
+    <h2>Pengelolaan Teks</h2>
+    <p>Hai, saya Naufal! Saya itu orangnya pendiam dan tulus, tapi punya hobi yang seru. Saya suka banget menggambar dan dengerin musik. Biasanya, saya nyari inspirasi buat gambar sambil dengerin musik yang saya suka. Dengan kepribadian yang suka merenung, saya sering banget dapet ide dari hal-hal kecil di sekitar saya. Bagi saya, <strong>menemukan kebahagiaan</strong> lewat apa yang saya lakuin itu <em>penting banget!</em></p>
+    
+    <hr>
+    
+    <blockquote>
+        "Ketika kamu berjuang, ingatlah bahwa kamu memiliki kekuatan untuk melewati semua rintangan. Setiap langkah kecil menuju tujuanmu adalah sebuah kemenangan."
+        <footer>- Megurine Luka</footer>
+    </blockquote>
+
+    <h2>Hyperlink dan Gambar</h2>
+    <p>Ini adalah salah satu situs web favorit saya: <a href="https://www.wattpad.com/" target="_blank">Kunjungi wattpad.com/m</a>. Saya sering mampir ke situs ini untuk mendapatkan informasi dan inspirasi.</p>
+
+    <p>Dan ini gambar yang saya suka:</p>
+    <a href="https://id.pinterest.com/pin/584131014184832682/" target="_blank">
+        <img src="we can do this.jpg" alt="Gambar Megurine Luka Chibi" style="width: 150px; height: auto;"/>
+    </a>
+
+    <h2>Membuat Daftar</h2>
+
+    <h3>Hal-hal yang Ingin Dicapai dalam Satu Tahun ke Depan</h3>
+    <ol>
+        <li>Mampu menjadi pribadi yang lebih baik.</li>
+        <li>Mempunyai masa depan cerah.</li>
+        <li>Membeli hal diinginkan dengan tabungan yang dikumpulin .</li>
+    </ol>
+
+    <h3>Hobi atau Aktivitas yang Saya Sukai</h3>
+    <ul>
+        <li>Menggambar dan berkarya seni.</li>
+        <li>Mendengarkan musik dan eksplorasi genre baru.</li>
+        <li>Mencoba note note musik baru dan main game kesukaan.</li>
+    </ul>
+
+    <h2>Tabel Data</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Kota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Naufal</td>
+                <td>19</td>
+                <td>Bandung</td>
+            </tr>
+            <tr>
+                <td>Megurine</td>
+                <td>20</td>
+                <td>Virtual</td>
+            </tr>
+            <tr>
+                <td>Zoro</td>
+                <td>21</td>
+                <td>East Blue</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Formulir Pendaftaran</h2>
+    <form action="/submit" method="post">
+        <label for="fullname">Nama Lengkap:</label>
+        <input type="text" id="fullname" name="fullname" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Pria</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Wanita</label>
+        <br><br>
+
+        <label for="city">Kota Tempat Tinggal:</label>
+        <select id="city" name="city">
+            <option value="virtual">Virtual</option>
+            <option value="bandung">Bandung</option>
+            <option value="east blue">East Blue</option>
+        </select>
+        <br><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Saya setuju dengan syarat dan ketentuan.</label>
+        <br><br>
+
+        <label for="message">Pesan atau Komentar:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <button type="submit">Kirim</button>
+    </form>
+</body>
+</html>
