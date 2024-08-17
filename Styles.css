@@ -1,0 +1,94 @@
+/* CSS Umum */
+
+/* Mengatur warna teks untuk semua elemen <p> */
+p {
+    color: red;
+}
+
+/* Mengatur latar belakang untuk div dengan kelas .container */
+.container {
+    background-color: yellow;
+}
+
+/* Mengatur warna dan ukuran font untuk paragraf dengan ID #highlight */
+#highlight {
+    color: orange;
+    font-size: 20px;
+}
+
+/* Mengatur warna teks tautan saat hover */
+a:hover {
+    color: blue;
+}
+
+/* Styling Box Model */
+#boxModel {
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 15px;
+    background-color: #e0e0e0;
+}
+
+/* Flexbox Container */
+.flex-container {
+    display: flex;
+    padding: 10px;
+}
+
+.item {
+    padding: 10px;
+    border: 2px solid gray;
+    background-color: #d0d0d0;
+}
+
+/* Styling Lanjutan */
+
+/* Font Styles untuk <h2> */
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Background untuk paragraf dengan kelas .background-text */
+.background-text {
+    background-image: url('blue\ tua.jpg'); /* Ganti dengan URL gambar background Anda */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: white;
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    height: 150px; /* Menetapkan tinggi untuk memastikan teks berada di tengah */
+    display: flex; /* Menggunakan Flexbox untuk penyelarasan */
+    align-items: center; /* Menyelaraskan teks secara vertikal */
+    justify-content: center; /* Menyelaraskan teks secara horizontal */
+}
+
+/* Styling untuk div dengan kelas .advanced-style */
+.advanced-style {
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, blue, purple);
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    /* Mengubah tata letak flex-container menjadi kolom pada layar kecil */
+    .flex-container {
+        flex-direction: column; /* Mengubah tata letak menjadi kolom */
+    }
+    
+    /* Mengubah ukuran font heading <h2> dan latar belakang halaman pada layar kecil */
+    h2 {
+        font-size: 24px; /* Mengubah ukuran font menjadi 24px */
+    }
+    
+    body {
+        background-color: #e0f7fa; /* Mengubah warna latar belakang halaman menjadi biru muda */
+    }
+}
