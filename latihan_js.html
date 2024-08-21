@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JavaScript</title>
+    <style>
+        #output {
+            margin-top: 20px;
+        }
+        #backButton {
+            display: none; /* Sembunyikan tombol Kembali secara default */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mainHeading">Latihan JavaScript</h1>
+    <p id="welcomeMessage">Selamat datang di latihan JavaScript</p>
+
+    <!-- Tombol untuk menampilkan pesan -->
+    <button onclick="alert('Hello World!')">Klik Saya</button>
+
+    <!-- Elemen untuk menampilkan output -->
+    <div id="output"></div>
+
+    <!-- Input dan tombol untuk pengendalian alur -->
+    <div id="controls">
+        <input type="number" id="userInput" placeholder="Masukkan angka">
+        <button onclick="checkValue()">Cek Nilai</button>
+        <button id="backButton" onclick="goBack()">Kembali</button>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
