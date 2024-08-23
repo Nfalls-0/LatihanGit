@@ -5,53 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan Bootstrap - Footer Responsif</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap">
     <style>
-        /* Custom background color for the body */
+        /* Custom styles */
         body {
-            background: linear-gradient(to right, #e0e0e0, #ffffff); /* Light gradient for a brighter look */
-            color: #333333; /* Dark text color for better readability */
+            background: linear-gradient(to bottom right, #e0c3fc, #8ec5fc); /* Gradient background for a vibrant look */
+            color: #333333; /* Dark text color */
         }
-        /* Custom background color for the header */
         .header-bg {
-            background: linear-gradient(to right, #ff007f, #ff00ff); /* Futuristic pink to purple gradient */
+            background: linear-gradient(to right, #ff007f, #ff00ff); /* Gradient background for header */
+            padding: 2rem;
         }
         .header-bg h1 {
-            color: #ffffff; /* White color for header text */
+            color: #ffffff; /* White text for header */
+            font-family: 'Roboto Slab', serif;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        /* Custom background color for the footer */
         .footer-bg {
-            background: linear-gradient(to right, #00bfff, #1e90ff); /* Futuristic blue gradient */
+            background: linear-gradient(to right, #00bfff, #1e90ff); /* Gradient background for footer */
         }
         .footer-bg a {
             color: #ffffff; /* White color for links */
         }
         .footer-bg a:hover {
-            color: #ffff00; /* Neon yellow color for link hover */
+            color: #ffff00; /* Neon yellow on hover */
         }
-        .social-media a {
-            color: #ffffff; /* White color for social media links */
-        }
-        .social-media a:hover {
-            color: #ffff00; /* Neon yellow color for social media link hover */
-        }
-        /* Custom card styles */
         .card {
-            background: #f8f9fa; /* Light card background for better readability */
-            border: 1px solid #dee2e6; /* Border color for card */
+            background: linear-gradient(to bottom right, #333333, #666666); /* Dark metallic gradient for cards */
+            border: 1px solid #444444;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
         .card-title {
-            color: #007bff; /* Primary color for card titles */
+            color: #ffffff; /* White color for card titles */
         }
         .card-text {
-            color: #6c757d; /* Secondary color for card text */
+            color: #e0e0e0; /* Light gray for card text */
         }
         .btn-primary {
-            background-color: #007bff; /* Primary button color */
-            border-color: #007bff; /* Button border color */
+            background: linear-gradient(to right, #6a0f2b, #9b4d66); /* Gradient button */
+            border: none;
+            color: #ffffff;
         }
         .btn-primary:hover {
-            background-color: #0056b3; /* Darker color on button hover */
-            border-color: #004085; /* Darker border color on button hover */
+            background: linear-gradient(to right, #9b4d66, #6a0f2b);
+            color: #ffffff;
         }
     </style>
 </head>
@@ -62,13 +66,13 @@
 
     <div class="container mt-3">
         <div class="row">
-            <!-- Contoh card dari latihan sebelumnya -->
+            <!-- Card examples -->
             <div class="col-sm-6 col-md-4">
                 <div class="card mb-4">
                     <img src="MegurineLN.jpg" class="card-img-top" alt="Guiding Hand T">
                     <div class="card-body">
                         <h5 class="card-title">Guiding Hand T</h5>
-                        <p class="card-text">A Guiding Hand is a versatile 3★ Pure card featuring Megurine Luka, offering a significant score boost through its scorer skill. With impressive stats and accessible acquisition options, it’s a valuable addition for boosting performance in the game.</p>
+                        <p class="card-text">A versatile 3★ Pure card featuring Megurine Luka, with a significant score boost.</p>
                         <a href="#" class="btn btn-primary">See More</a>
                     </div>
                 </div>
@@ -78,7 +82,7 @@
                     <img src="Sudou Kayo.jpg" class="card-img-top" alt="The Madly Envious Tailor T">
                     <div class="card-body">
                         <h5 class="card-title">The Madly Envious Tailor T</h5>
-                        <p class="card-text">This card comes with the Bloodstained Insanity Dress costume, which can only be worn by Megurine Luka. It also includes a unique accessory and hairstyle for Luka. There are 4 variants of this costume, with three unlocked when the card reaches Master Ranks 1, 3, and 5. The hairstyle is unlocked at Master Rank 2 and is exclusive to Luka.</p>
+                        <p class="card-text">Includes the Bloodstained Insanity Dress costume for Megurine Luka, with unique accessories and hairstyle.</p>
                         <a href="#" class="btn btn-primary">See more</a>
                     </div>
                 </div>
@@ -88,7 +92,7 @@
                     <img src="MegurineN25.jpg" class="card-img-top" alt="Doing Things My Own Way">
                     <div class="card-body">
                         <h5 class="card-title">Doing Things My Own Way</h5>
-                        <p class="card-text">This card comes with the Dawn Sky-colored Gradation Dress costume, including a matching accessory and a unique accessory for Luka. There are 4 variants of this costume, with three unlocked at Master Ranks 1, 3, and 5.</p>
+                        <p class="card-text">This card comes with the Dawn Sky-colored Gradation Dress costume, including a unique accessory.</p>
                         <a href="#" class="btn btn-primary">See More</a>
                     </div>
                 </div>
@@ -99,7 +103,7 @@
     <footer class="footer-bg text-white py-4 mt-4">
         <div class="container">
             <div class="row">
-                <!-- Kolom 1: Links -->
+                <!-- Links -->
                 <div class="col-sm-6 col-md-3">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
@@ -109,20 +113,19 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <!-- Kolom 2: About Us -->
+                <!-- About Us -->
                 <div class="col-sm-6 col-md-3">
                     <h5>About Us</h5>
-                    <p>Megurine Luka, Vocaloid dari Project SEKAI, diperkenalkan pada 30 Januari 2009. Dengan suara lembut dan gaya futuristik, Luka dikenal melalui lagu-lagu keren dan penampilannya yang stylish.</p>
-                    <p>Proyek ini juga didukung oleh NauSynthara.</p>
+                    <p>Megurine Luka, Vocaloid dari Project SEKAI, diperkenalkan pada 30 Januari 2009. Dikenal dengan suara lembut dan gaya futuristik.</p>
+                    <p>Didukung oleh NauSynthara.</p>
                 </div>
-                <!-- Kolom 3: Contact Info -->
+                <!-- Contact Info -->
                 <div class="col-sm-6 col-md-3">
                     <h5>Contact Info</h5>
-                    <p>Ada yang mau ditanyain? Yuk hubungi kami di:</p>
                     <p>Email: nau.synthara@gmail.com</p>
                     <p>Phone: 0811223372499</p>
                 </div>
-                <!-- Kolom 4: Social Media -->
+                <!-- Social Media -->
                 <div class="col-sm-6 col-md-3 social-media">
                     <h5>Follow Us</h5>
                     <ul class="list-unstyled">
