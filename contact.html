@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - NauSynthara</title>
+    <link href="style.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Error Styling */
+        .error {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Kontak Kami</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">NauSynthara</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <section id="contact" class="mt-5">
+            <h2>Hubungi Kami</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda">
+                </div>
+                <div class="form-group">
+                    <label for="email">Alamat Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Masukkan pesan Anda"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2024 NauSynthara. Semua hak cipta dilindungi.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Prevent form submission
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Regular expression for email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Get error indicators
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const messageField = document.getElementById('message');
+
+            // Clear previous errors
+            [nameField, emailField, messageField].forEach(field => field.classList.remove('error'));
+
+            // Error messages
+            let errors = [];
+
+            // Check if fields are empty
+            if (!name) {
+                nameField.classList.add('error');
+                errors.push('Nama harus diisi.');
+            }
+            if (!email) {
+                emailField.classList.add('error');
+                errors.push('Email harus diisi.');
+            } else if (!emailPattern.test(email)) {
+                emailField.classList.add('error');
+                errors.push('Email tidak valid.');
+            }
+            if (!message) {
+                messageField.classList.add('error');
+                errors.push('Pesan harus diisi.');
+            }
+
+            // Display errors or submit form
+            if (errors.length > 0) {
+                alert(errors.join('\n'));
+            } else {
+                alert('Formulir berhasil dikirim!');
+                // Optionally, you can submit the form data here using AJAX or similar method
+                // e.g., sendFormData(name, email, message);
+            }
+        });
+    </script>
+</body>
+</html>
