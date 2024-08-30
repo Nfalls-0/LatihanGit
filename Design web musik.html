@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desain Musik</title>
+    <link rel="stylesheet" href="Design web music.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Tambahkan CSS di sini jika diperlukan */
+        .audio-player .controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .audio-player .controls button {
+            background-color: #1E90FF; /* Warna biru untuk tombol */
+            color: #ffffff; /* Teks putih untuk ikon */
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+
+        .audio-player .controls button:hover {
+            background-color: #0b7dda; /* Biru lebih gelap saat hover */
+        }
+
+        .audio-player .controls #favoriteBtn {
+            background-color: #FF69B4; /* Merah muda untuk ikon love */
+        }
+
+        .audio-player .controls #favoriteBtn:hover {
+            background-color: #ff4d7a; /* Merah muda gelap saat hover */
+        }
+
+        .audio-player .controls i {
+            font-size: 18px; /* Ukuran ikon */
+        }
+
+        .audio-player .controls .favorited {
+            color: #FF4500; /* Merah untuk ikon favorit */
+        }
+
+        /* Video Background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Pastikan video berada di belakang semua elemen lain */
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Memastikan video menutupi seluruh area tanpa distorsi */
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="livesound.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">NauSynthara</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#playlist">Playlist</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <main id="main-content">
+            <section id="playlist">
+                <h2>Playlist</h2>
+                <div class="playlist-item">
+                    <img src="Samsa.jpg" alt="Samsa">
+                    <div class="playlist-info">
+                        <h3>ザムザ / Zamuza <span class="artist-name">Teniwoha</span></h3>
+                        <p id="description">Lagu ini menggambarkan krisis identitas dan ketidakpuasan mendalam. Tokoh utama merasa terasing dari kenyataan dan berjuang dengan keputusasaan, tapi tetap berharap akan ada penerimaan dan penghargaan di masa depan. Referensinya mungkin terinspirasi oleh Gregor Samsa dari "Metamorphosis" karya Franz Kafka, yang juga mengalami perubahan dan keterasingan dari dunia dan dirinya sendiri.</p>
+                        <div class="audio-player">
+                            <audio id="audio" src="てにをは - ザムザ Zamuza - VOCALOID X6 (cover) (VSQx).mp3"></audio>
+                            <div class="controls">
+                                <button id="playPauseBtn" class="control-btn"><i class="fas fa-play"></i></button>
+                                <button id="favoriteBtn" class="control-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                            <div class="progress-container">
+                                <input id="progressBar" type="range" min="0" max="100" value="0">
+                            </div>
+                            <div class="time">
+                                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tambahkan lebih banyak item playlist di sini -->
+            </section>
+        </main>
+
+        <aside id="sidebar">
+            <h2>Search</h2>
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+            <h3>Filter</h3>
+            <ul>
+                <li><a href="#">Genre</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="#">Album</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NauSynthara. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('audio');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const progressBar = document.getElementById('progressBar');
+            const currentTimeElem = document.getElementById('currentTime');
+            const durationElem = document.getElementById('duration');
+            const favoriteBtn = document.getElementById('favoriteBtn');
+
+            let isPlaying = false;
+
+            playPauseBtn.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    isPlaying = true;
+                } else {
+                    audio.pause();
+                    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    isPlaying = false;
+                }
+            });
+
+            audio.addEventListener('loadedmetadata', () => {
+                durationElem.textContent = formatTime(audio.duration);
+            });
+
+            audio.addEventListener('timeupdate', () => {
+                const currentTime = audio.currentTime;
+                const duration = audio.duration;
+                const progress = (currentTime / duration) * 100;
+
+                progressBar.value = progress;
+                currentTimeElem.textContent = formatTime(currentTime);
+            });
+
+            progressBar.addEventListener('input', () => {
+                const value = progressBar.value;
+                const duration = audio.duration;
+                audio.currentTime = (value / 100) * duration;
+            });
+
+            favoriteBtn.addEventListener('click', () => {
+                if (favoriteBtn.classList.contains('favorited')) {
+                    favoriteBtn.classList.remove('favorited');
+                    favoriteBtn.innerHTML = '<i class="fas fa-heart"></i>';
+                } else {
+                    favoriteBtn.classList.add('favorited');
+                    favoriteBtn.innerHTML = '<i class="fas fa-heart-broken"></i>'; // Ganti ikon jika diinginkan
+                }
+            });
+
+            function formatTime(seconds) {
+                const minutes = Math.floor(seconds / 60);
+                const secondsPart = Math.floor(seconds % 60);
+                return `${minutes}:${secondsPart < 10 ? '0' : ''}${secondsPart}`;
+            }
+        });
+    </script>
+</body>
+</html>

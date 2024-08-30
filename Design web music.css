@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Menggunakan font Orbitron untuk logo */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; /* Warna teks */
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Background umum yang sesuai dengan video */
+}
+
+header {
+    background-color: rgba(30, 144, 255, 0.8); /* Biru Terang dengan transparansi */
+    color: #ffffff; /* Teks Putih */
+    padding: 10px 0;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px; /* Ukuran font logo dikurangi */
+    color: #ffffff; /* Teks Putih */
+    margin: 0;
+    letter-spacing: 2px; /* Spasi antar huruf untuk tampilan yang lebih lebar */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Teks Putih */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+main {
+    flex: 3;
+    padding-right: 20px;
+}
+
+aside {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Background Sidebar dengan transparansi */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Styling untuk filter di sidebar */
+aside h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(30, 144, 255, 0.8); /* Biru Terang dengan transparansi */
+    padding-bottom: 10px;
+    color: #000000; /* Warna gelap untuk teks */
+}
+
+aside h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    border-bottom: 2px solid rgba(30, 144, 255, 0.8); /* Biru Terang dengan transparansi */
+    padding-bottom: 10px;
+    color: #000000; /* Warna gelap untuk teks */
+}
+
+.filter-dropdown {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.filter-dropdown select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #ffffff; /* Background Dropdown */
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath d="M7 10l5 5 5-5H7z" fill="%231E90FF" /%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.filter-dropdown::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(30, 144, 255, 0.8); /* Biru Terang dengan transparansi */
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.filter-item {
+    margin-bottom: 15px;
+}
+
+.filter-item label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #000000; /* Warna gelap untuk teks */
+}
+
+.filter-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.filter-item input[type="checkbox"] + span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #000000; /* Warna gelap untuk teks */
+}
+
+section#playlist {
+    margin-bottom: 20px;
+}
+
+.playlist-item {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8); /* Background Item Playlist dengan transparansi */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.playlist-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.playlist-info {
+    flex: 1;
+}
+
+.playlist-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: #000000; /* Warna gelap untuk teks */
+}
+
+.artist-name {
+    font-style: italic;
+    color: #333333; /* Warna lebih gelap untuk nama artis */
+    margin-left: 10px;
+}
+
+/* Styling untuk audio player */
+.audio-player {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8); /* Background Audio Player dengan transparansi */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.audio-player .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.audio-player .controls button {
+    background-color: rgba(30, 144, 255, 0.8); /* Biru Terang dengan transparansi */
+    color: #ffffff; /* Teks Putih */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.audio-player .controls button:hover {
+    background-color: rgba(11, 125, 218, 0.8); /* Biru Lebih Gelap saat Hover */
+}
+
+.audio-player .controls #favoriteBtn {
+    background-color: rgba(255, 105, 180, 0.8); /* Merah Muda dengan transparansi */
+}
+
+.audio-player .controls #favoriteBtn:hover {
+    background-color: rgba(255, 77, 122, 0.8); /* Merah Muda Gelap saat Hover */
+}
+
+.audio-player .controls i {
+    font-size: 18px; /* Ukuran ikon */
+}
+
+.audio-player .controls .favorited {
+    color: #FF4500; /* Merah untuk ikon favorit */
+}
+
+/* Styling untuk teks deskripsi */
+#description {
+    color: #333; /* Warna teks agak gelap */
+    font-family: 'Poppins', sans-serif; /* Konsistensi dengan font lain */
+    font-size: 16px; /* Ukuran font yang sesuai */
+}
+
+.search-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #ffffff; /* Background Input */
+}
+
+.search-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #FF4500; /* Merah */
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #e03b2d; /* Merah Gelap saat Hover */
+}
+
+footer {
+    background-color: rgba(30, 144, 255, 0.8); /* Biru Terang dengan transparansi */
+    color: #ffffff; /* Teks Putih */
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #ffffff; /* Teks Putih */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
