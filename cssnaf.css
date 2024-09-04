@@ -1,0 +1,164 @@
+/* Style Umum */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a23; /* Warna latar belakang futuristik */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1f1f3d;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00d4ff; /* Warna logo ceria */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00d4ff; /* Warna hover navigasi */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1f1f3d, #0a0a23);
+    position: relative;
+    color: #fff;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin: 0;
+}
+
+/* Music Player */
+.music-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #1f1f3d;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.player-controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.player-controls button {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    color: #00d4ff;
+    font-size: 1.5rem; /* Ukuran ikon */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.player-controls button:hover {
+    background-color: #333;
+    color: #00d4ff;
+}
+
+/* Playlist */
+.playlist {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.playlist h2 {
+    margin-bottom: 20px;
+    color: #00d4ff;
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.playlist ul li {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f3d;
+    color: #fff;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #00d4ff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.5rem; /* Ukuran ikon */
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007a99;
+}
